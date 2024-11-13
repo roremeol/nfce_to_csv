@@ -98,6 +98,8 @@ function parse(estado = null) {
   const p = parsers[estado];
 
   if (p) return typeof p === "function" ? p() : parsers[p]();
+
+  return [];
 }
 
 function extrairDadosNotasFiscais() {
