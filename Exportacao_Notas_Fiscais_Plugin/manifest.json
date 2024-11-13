@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Exportação de Notas Fiscais",
+  "version": "1.0",
+  "description": "Captura dados de notas fiscais e exporta para Excel.",
+  "permissions": ["scripting", "activeTab", "storage", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nfce.fazenda.sp.gov.br/*",
+        "http://app.sefaz.es.gov.br/*",
+        "https://sat.sef.sc.gov.br/*",
+        "https://nfce.sefaz.pe.gov.br/*",
+        "http://www.nfce.sefaz.ma.gov.br/*"
+      ],
+      "js": ["content_script.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://www.nfce.fazenda.sp.gov.br/*",
+    "http://app.sefaz.es.gov.br/*",
+    "https://sat.sef.sc.gov.br/*",
+    "https://nfce.sefaz.pe.gov.br/*",
+    "http://www.nfce.sefaz.ma.gov.br/*"
+  ]
+}
