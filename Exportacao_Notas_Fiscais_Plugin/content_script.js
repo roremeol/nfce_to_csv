@@ -31,7 +31,7 @@ function getEstado() {
   const result = host
     .toLowerCase()
     .match(
-      /\.(ac|al|ap|am|ba|ce|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to|df)\./
+      /(satsp\.)|(\.(ac|al|ap|am|ba|ce|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to|df)\.)/
     );
 
   return result.length > 0 ? result[0].replace(/\./g, "") : null;
@@ -50,7 +50,7 @@ function parse(estado = null) {
         const valorTd = tr.querySelector("td:nth-of-type(2)");
         const nome = produto
           .querySelector(".txtTit")
-          .innerText.replace(/[^\w\s]/g, "");
+          .innerText.replace(/[^\w\s./-]/g, "");
         const codigo = produto
           .querySelector(".RCod")
           .innerText.replace(/[^\d]/g, "");
@@ -60,6 +60,32 @@ function parse(estado = null) {
         const valor = valorTd
           .querySelector(":last-child")
           .innerText.replace(/[^\d,]/g, "");
+        dados.push({ nome, codigo, quantidade, valor });
+      });
+
+      return dados;
+    },
+    // outro sistema disponivel em sp
+    satsp: () => {
+      const dados = [];
+
+      const trs = document.querySelectorAll("#tableItens tbody tr");
+      trs.forEach((tr) => {
+        if (tr.querySelectorAll("td").length < 8) return true;
+
+        const codigo = tr
+          .querySelector("td:nth-of-type(2)")
+          .innerText.replace(/[^\d\w]/g, "");
+        const nome = tr
+          .querySelector("td:nth-of-type(3)")
+          .innerText.replace(/[^\w\s./-]/g, "");
+        const quantidade = tr
+          .querySelector("td:nth-of-type(4)")
+          .innerText.replace(/[^\d,]/g, "");
+        const valor = tr
+          .querySelector("td:nth-of-type(8)")
+          .innerText.replace(/[^\d,]/g, "");
+
         dados.push({ nome, codigo, quantidade, valor });
       });
 
@@ -78,7 +104,7 @@ function parse(estado = null) {
           .innerText.replace(/[^\d]/g, "");
         const nome = tr
           .querySelector("td:nth-of-type(2)")
-          .innerText.replace(/[^\w\s]/g, "");
+          .innerText.replace(/[^\w\s./-]/g, "");
         const quantidade = tr
           .querySelector("td:nth-of-type(3)")
           .innerText.replace(/[^\d,]/g, "");
@@ -105,7 +131,14 @@ function parse(estado = null) {
 function extrairDadosNotasFiscais() {
   const estado = getEstado();
 
-  const dados = parse(estado);
+  let dados = [];
+
+  try {
+    dados = parse(estado);
+  } catch (e) {
+    dados = [];
+    console.log(e);
+  }
 
   if (dados.length == 0)
     return alert(

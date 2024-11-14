@@ -16,6 +16,7 @@
     {
       "matches": [
         "https://www.nfce.fazenda.sp.gov.br/*",
+        "https://satsp.fazenda.sp.gov.br/*",
         "http://app.sefaz.es.gov.br/*",
         "https://sat.sef.sc.gov.br/*",
         "https://nfce.sefaz.pe.gov.br/*",
@@ -26,6 +27,7 @@
   ],
   "host_permissions": [
     "https://www.nfce.fazenda.sp.gov.br/*",
+    "https://satsp.fazenda.sp.gov.br/*",
     "http://app.sefaz.es.gov.br/*",
     "https://sat.sef.sc.gov.br/*",
     "https://nfce.sefaz.pe.gov.br/*",
