@@ -27,7 +27,7 @@ Uma conhecida queria, após a [Festa do Livro da USP](https://festadolivro.edusp
 5. Ative o item **Fixar na barra de ferramentas** ( vai aparecer o ícone do plugin na barra do chrome ![Vai aparecer o ícone do plugin na barra do chrome](Exportacao_Notas_Fiscais_Plugin/icon16.png) )
 6. Acesse o site da nota fiscal, passe pelo CAPTCHA manualmente e clique no ícone do plugin para fazer o download do CSV.
 
-[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://drive.google.com/file/d/1uscNw17bPmfNa6UrIX9ym-IvcpzXCc2I/view?usp=share_link)
+[![Watch the video](imagens/thumb.jpg)](https://youtu.be/R1jVU5cFbO8)
 
 ## Estado Atual e Proximos Passos
 
