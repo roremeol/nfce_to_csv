@@ -91,6 +91,7 @@ function parse(estado = null) {
 
       return dados;
     },
+    rj: "sp",
     es: "sp",
     sc: "sp",
     pe: "sp",

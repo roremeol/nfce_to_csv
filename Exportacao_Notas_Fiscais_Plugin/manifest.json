@@ -20,7 +20,8 @@
         "http://app.sefaz.es.gov.br/*",
         "https://sat.sef.sc.gov.br/*",
         "https://nfce.sefaz.pe.gov.br/*",
-        "http://www.nfce.sefaz.ma.gov.br/*"
+        "http://www.nfce.sefaz.ma.gov.br/*",
+        "https://consultadfe.fazenda.rj.gov.br/*"
       ],
       "js": ["content_script.js"]
     }
@@ -31,6 +32,7 @@
     "http://app.sefaz.es.gov.br/*",
     "https://sat.sef.sc.gov.br/*",
     "https://nfce.sefaz.pe.gov.br/*",
-    "http://www.nfce.sefaz.ma.gov.br/*"
+    "http://www.nfce.sefaz.ma.gov.br/*",
+    "https://consultadfe.fazenda.rj.gov.br/*"
   ]
 }
