@@ -18,6 +18,8 @@ Uma conhecida queria, após a [Festa do Livro da USP](https://festadolivro.edusp
 
 ![Maranhão](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bandeira_do_Maranh%C3%A3o.svg/20px-Bandeira_do_Maranh%C3%A3o.svg.png) [Maranhão](exemplos/ma1.webp)
 
+![Rio de Janeiro](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/20px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png) [Rio de Janeiro](exemplos/rj1.webp)
+
 ## Carregar e Testar o Plugin
 
 1. Abra o Chrome e vá para [chrome://extensions/](chrome://extensions/)
